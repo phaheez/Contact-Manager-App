@@ -1,0 +1,79 @@
+<h1 mat-dialog-title><mat-icon>create</mat-icon>Add Contact</h1>
+
+<div mat-dialog-content>
+  <!-- Loading Spinner -->
+  <div *ngIf="loading">
+    <app-spinner></app-spinner>
+  </div>
+
+  <form [formGroup]="contactForm">
+    <!--Name-->
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input formControlName="contactName" matInput placeholder="Name" />
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+
+    <!--Mobile-->
+    <mat-form-field appearance="fill">
+      <mat-label>Mobile</mat-label>
+      <input formControlName="mobile" matInput placeholder="Mobile Number" />
+      <mat-icon matSuffix>call</mat-icon>
+    </mat-form-field>
+
+    <!--Photo Url-->
+    <mat-form-field appearance="fill">
+      <mat-label>Photo Url</mat-label>
+      <input type="url" formControlName="photoUrl" matInput placeholder="Photo Url" />
+      <mat-icon matSuffix>add_a_photo</mat-icon>
+    </mat-form-field>
+
+    <!--Email-->
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input type="email" formControlName="contactEmail" matInput placeholder="Ex. abx@example.com" />
+      <mat-icon matSuffix>mail</mat-icon>
+    </mat-form-field>
+
+    <!--Company-->
+    <mat-form-field appearance="fill">
+      <mat-label>Company</mat-label>
+      <input matInput formControlName="company" placeholder="Ex. Access Bank Plc" />
+      <mat-icon matSuffix>work</mat-icon>
+    </mat-form-field>
+
+    <!--Designation-->
+    <mat-form-field appearance="fill">
+      <mat-label>Choose a designation</mat-label>
+      <mat-select formControlName="designationId">
+        <mat-option *ngFor="let designation of designations" [value]="designation.id">
+          {{ designation.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!--Date-->
+    <mat-form-field appearance="fill">
+      <mat-label>Choose a date</mat-label>
+      <input formControlName="date" matInput [matDatepicker]="picker" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <!--Address-->
+    <mat-form-field appearance="fill">
+      <mat-label>Address</mat-label>
+      <textarea formControlName="address"
+        cols="5"
+        rows="5"
+        matInput
+        placeholder="Ex. 100 Main St, Lagos Mainland"
+      ></textarea>
+    </mat-form-field>
+  </form>
+</div>
+
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+  <button mat-raised-button color="primary" (click)="addContact()">{{ actionBtn }}</button>
+</div>

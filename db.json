@@ -1,0 +1,48 @@
+{
+  "contacts": [
+    {
+      "contactName": "Faiz Fasasi",
+      "mobile": "08064902317",
+      "photoUrl": "http://assets.stickpng.com/images/585e4bcdcb11b227491c3396.png",
+      "contactEmail": "faizfasasi@gmail.com",
+      "company": "Access Bank Plc",
+      "designationId": "1",
+      "date": "2022-05-16T23:00:00.000Z",
+      "address": "Lagos Island",
+      "id": 1
+    },
+    {
+      "contactName": "Rukayat Ismail",
+      "mobile": "08090542939",
+      "photoUrl": "http://assets.stickpng.com/images/585e4bcdcb11b227491c3396.png",
+      "contactEmail": "smiledam20@gmail.com",
+      "company": "Fidelity Bank Plc",
+      "designationId": "3",
+      "date": "2022-03-05T23:00:00.000Z",
+      "address": "Lagos Mainland",
+      "id": 2
+    }
+  ],
+  "designations": [
+    {
+      "id": "1",
+      "name": "Back End Engineer"
+    },
+    {
+      "id": "2",
+      "name": "Full Stack Developer"
+    },
+    {
+      "id": "3",
+      "name": "UI/UX Designer"
+    },
+    {
+      "id": "4",
+      "name": "Solution Architect"
+    },
+    {
+      "id": "5",
+      "name": "Devops Engineer"
+    }
+  ]
+}

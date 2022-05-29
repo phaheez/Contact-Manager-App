@@ -1,0 +1,51 @@
+<h1 mat-dialog-title>Contact Details</h1>
+<div mat-dialog-content>
+  <img class="dialog-img" [src]="contact.photoUrl" onerror="this.src='assets/user_image.png'" [alt]="contact.contactName">
+  <mat-list role="list">
+    <!--Name-->
+    <mat-list-item role="listitem">
+      <mat-icon mat-list-icon>perm_identity</mat-icon>
+      <div mat-line>Name: <span style="font-weight: bold;">{{ contact.contactName }}</span></div>
+    </mat-list-item>
+
+    <!--Mobile-->
+    <mat-list-item role="listitem">
+      <mat-icon mat-list-icon>call</mat-icon>
+      <div mat-line>Mobile: <span style="font-weight: bold;">{{ contact.mobile }}</span></div>
+    </mat-list-item>
+
+    <!--Email-->
+    <mat-list-item role="listitem">
+      <mat-icon mat-list-icon>mail</mat-icon>
+      <div mat-line>Email: <span style="font-weight: bold;">{{ contact.contactEmail }}</span></div>
+    </mat-list-item>
+
+    <!--Company-->
+    <mat-list-item role="listitem">
+      <mat-icon mat-list-icon>work</mat-icon>
+      <div mat-line>Company: <span style="font-weight: bold;">{{ contact.company }}</span></div>
+    </mat-list-item>
+
+    <!--Address-->
+    <mat-list-item role="listitem">
+      <mat-icon mat-list-icon>location_on</mat-icon>
+      <div mat-line>Address: <span style="font-weight: bold;">{{ contact.address }}</span></div>
+    </mat-list-item>
+
+    <!--Designation-->
+    <mat-list-item role="listitem">
+      <mat-icon mat-list-icon>book</mat-icon>
+      <div mat-line>Designation: <span style="font-weight: bold;">{{ contact.designation }}</span></div>
+    </mat-list-item>
+
+    <!--Date-->
+    <mat-list-item role="listitem">
+      <mat-icon mat-list-icon>access_time</mat-icon>
+      <div mat-line>Date: <span style="font-weight: bold;">{{ contact.date | date }}</span></div>
+    </mat-list-item>
+  </mat-list>
+</div>
+
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+</div>
